@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Account</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to send account from selector to details</description>
+    <lightningMessageFields>
+        <fieldName>Id</fieldName>
+        <description>Account Id to send</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Name</fieldName>
+        <description>Account Name to send</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Type</fieldName>
+        <description>Account Type to send</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Industry</fieldName>
+        <description>Account Industry to send</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Budget__c</fieldName>
+        <description>Account budget to send</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Description</fieldName>
+        <description>Account description to send</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

@@ -1,0 +1,12 @@
+<template>
+    <a class="card" onclick={tileClick}>
+        <ul>
+            <li><img class="account-img" src={imageURL}></img></li>
+            <li class="title"><strong>Name:</strong> {account.Name}</li>
+            <li class="title"><strong>Owner:</strong> {account.Owner.Name}</li>
+            <li class="title"><strong>Budget:</strong> {account.Budget__c}$</li>
+            <li class="title"><strong>Employees:</strong> {account.Number_of_Employees__c}</li>
+            <li class="title"><strong>Type:</strong> {account.Type}</li>
+        </ul>
+    </a>
+</template>

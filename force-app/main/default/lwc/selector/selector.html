@@ -1,0 +1,41 @@
+<template>
+    <article class="slds-card">
+		<div class="slds-card__header slds-grid">
+			<header class="slds-media slds-media_center slds-has-flexi-truncate">
+				<div class="slds-media__body">
+					<h2 class="slds-card__header-title">
+						<span>Find an account</span>
+					</h2>
+				</div>
+			</header>
+		</div>
+		<template if:true={accounts}>
+			<div class="slds-card__body slds-card__body_inner">
+				<div class="slds-align_absolute-center">
+					<lightning-combobox value={typeValue} placeholder="Select type of account"
+						options={typeOptions} onchange={handleAccountTypeChange}>
+					</lightning-combobox>
+				</div>
+				<div class="container">
+					<template if:false={isEmpty}>
+						<template for:each={accounts} for:item="account"> 
+							<div key={account.Id}>
+								<c-tile
+									key={account.Id}
+									account={account}
+									ontileclick={handleAccountSelected}>
+								</c-tile>
+							</div>
+						</template>
+					</template>
+				</div>
+				<template if:true={isEmpty}>
+					<div class="slds-align_absolute-center">There are no records for this type of account</div>
+				</template>
+			</div>
+		</template>
+		<template if:false={accounts}>
+			<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+		</template>
+	</article>
+</template>

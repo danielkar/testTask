@@ -1,0 +1,35 @@
+.card {
+    width: 185px;
+    height: 320px;
+    flex-direction: row;
+    border: 1px rgb(168, 166, 166) solid;
+    background-color: white;
+    margin:5px;
+    padding: 5px;
+    display: flex;
+}
+
+.account-img {
+    width: 172px;
+    height: 180px;
+}
+
+.title {
+    color:darkslategray;
+}
+
+a:link {
+    color: rgb(159, 159, 159);
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
